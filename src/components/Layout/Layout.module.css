@@ -1,0 +1,5 @@
+.glass {
+  @apply absolute inset-0 z-0;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
