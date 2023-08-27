@@ -12,13 +12,13 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="h-full flex items-center justify-center mx-4 w-6">
       <button
-        className="text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+        className="text-primary hover:text-gray-900 focus:outline-none focus:text-gray-900"
         onClick={toggleMenu}
       >
         <svg
-          className="h-6 w-6"
+          className="h-10 w-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -45,7 +45,7 @@ const HamburgerMenu = () => {
         <div className="absolute right-0 top-0 w-screen h-screen glass shadow-lg z-50">
           <div className="flex justify-around align-middle flex-col h-48">
             <button
-              className="absolute top-4 right-4 text-white font-black hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              className="absolute top-9 right-6 text-white font-black hover:text-gray-900 focus:outline-none focus:text-gray-900"
               onClick={closeMenu}
             >
               <svg
