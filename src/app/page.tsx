@@ -1,6 +1,7 @@
 'use client';
 
 import Header from '@/components/Header';
+import MiddleInfo from '@/components/MiddleInfo';
 
 export default function Home() {
   return (
@@ -8,7 +9,9 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <main className="flex h-80 w-full flex-col">
+        <MiddleInfo />
+      </main>
     </>
   );
 }

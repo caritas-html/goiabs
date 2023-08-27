@@ -32,3 +32,16 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
+
+.bg-mid {
+  background: url('/bg-mid.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(0);
+}
+
+.bg-mid:hover {
+  filter: grayscale(100%);
+  animation: bg-mid 1s ease-in-out infinite alternate;
+}
