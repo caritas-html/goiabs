@@ -43,7 +43,7 @@ const HamburgerMenu = () => {
 
       {isOpen && (
         <div className="absolute right-0 top-0 w-screen h-screen glass shadow-lg z-50">
-          <div className="flex justify-around align-middle flex-col h-48">
+          <div className="flex justify-around align-middle flex-col h-48 z-50">
             <button
               className="absolute top-9 right-6 text-white font-black hover:text-gray-900 focus:outline-none focus:text-gray-900"
               onClick={closeMenu}

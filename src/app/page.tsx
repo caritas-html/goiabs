@@ -9,7 +9,7 @@ export default function Home() {
       <header>
         <Header />
       </header>
-      <main className="flex h-80 w-full flex-col">
+      <main className="flex h-screen w-screen">
         <MiddleInfo />
       </main>
     </>

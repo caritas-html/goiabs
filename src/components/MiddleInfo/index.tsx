@@ -1,13 +1,40 @@
-import React, { useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 export default function MiddleInfo() {
-  const [isGrayscale, setIsGrayscale] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const toggleGrayscale = () => {
-    setIsGrayscale(!isGrayscale);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <div className="h-full flex flex-col justify-center items-center w-full bg-mid"></div>
+    <>
+      {/* <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head> */}
+      <div className="h-full w-full">
+        {isMobile ? (
+          <div className="h-full w-full -z-10 object-cover bg-mid grayscale bg-mid-sm"></div>
+        ) : (
+          <Image
+            src="/bg-mid-lg.png"
+            alt="abstract-image"
+            width={1980}
+            height={300}
+            className="h-full w-full object-contain "
+          />
+        )}
+      </div>
+    </>
   );
 }
