@@ -24,7 +24,7 @@ export default function MiddleInfo() {
       </Head> */}
       <div className="h-full w-full">
         {isMobile ? (
-          <div className="h-full w-full -z-10 object-cover bg-mid grayscale bg-mid-sm"></div>
+          <div className="h-full w-full object-cover bg-mid grayscale bg-mid-sm"></div>
         ) : (
           <Image
             src="/bg-mid-lg.png"

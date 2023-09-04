@@ -12,16 +12,12 @@ const museoModerno = MuseoModerno({
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <>
-      <header className={museoModerno.className}>
+      <header className={`z-50 fixed ${museoModerno.className}`}>
         <div
           id="mobile-header"
-          className="flex justify-between items-center w-full bg-header h-24 opacity-95 px-4"
+          className="flex justify-between items-center w-full bg-header h-24 opacity-95 px-4 "
         >
           <div id="logo-header">
             <Image
